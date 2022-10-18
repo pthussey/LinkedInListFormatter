@@ -16,10 +16,17 @@ print('This program accepts an excel file (.xlxs) ' +
       'and puts the entries into an easier to read format.\n')
 
 filepath = input('Enter the path to your file, ' +
-                 'including the filename itself: ')
+                 'including the filename with the filetype extension: ')
 
 # Check that extension is xlsx
-extension = os.path.split(filepath)[1].split('.')[1]
+try:
+    extension = os.path.split(filepath)[1].split('.')[1]
+except IndexError:
+    print('\nError:\nPlease ensure that the file extension ' +
+          'is included in the filename and try again.')
+    input('Press enter to exit.')
+    sys.exit(1)
+
 if extension != 'xlsx':
     print('\nError:\nThe file type must be xlsx. ' +
           'Please ensure the file is in the proper format and try again.')
@@ -143,14 +150,12 @@ def format_edu (input_edu_string):
     # Initiate a string to hold all the education in a new format
     edu_string = ''
     
-    # Rebuild the education string (edu_string) in a more readable way
+    # Rebuild the education string (edu_string) in a more readable way. 
     # Note that for education entries in LinkedIn 'school' is the only required field, others are optional. 
-    # If the optional fields are missing, question marks (?) will be added to indicate that.
-    # If someone uses an unlisted school name then only the degree and period exist, 
-    # and someone can enter just the school and period without the degree. 
-    # In these cases which ever one exists will be output in the string.
-    # There are also rare cases in which only a period or degree exists, 
-    # which would be the result when someone uses an unlisted school name, and includes only the period or degree. 
+    # If the optional fields are missing, question marks (?) will be added to indicate that. 
+    # In some cases of unregistered school names, it seems the school name sometimes does not appear in the listing, 
+    # and only the degree and/or period, if entered, show up.  
+    # These different cases are all handled below. 
     for idx, edu in enumerate(edu_list):
         # Print a warning if "Profile education" is present in the education entry.
         if edu == "Profile education":
@@ -167,7 +172,7 @@ def format_edu (input_edu_string):
             else:
                 edu_string = edu_string + '\n' + '- ' + degree + ': ' + school +  ' (' + period + ')'
 
-        elif (',' in edu) and ('·' not in edu): # The school and degree exist, but not the period
+        elif (',' in edu) and ('·' not in edu): # The school AND degree exist, but not the period
             school, degree = edu.rsplit(', ', 1) # rsplit used to account for comma in school name case
             if idx == 0:
                 edu_string = edu_string + '- ' + degree + ': ' + school +  ' (????)'
@@ -199,12 +204,12 @@ def format_edu (input_edu_string):
                 else:
                     edu_string = edu_string + '\n' + '- ' + school_or_degree +  ' (' + period + ')'
 
-        else: # Only the school exists
-            school = edu
+        else: # Only the school or degree exists (only period case is handled above)
+            school_or_degree = edu
             if idx == 0:
-                edu_string = edu_string + '- ' + '??: ' + school +  ' (????)'
+                edu_string = edu_string + '- ' + school_or_degree +  ' (????)'
             else:
-                edu_string = edu_string + '\n' + '- '+ '??: ' + school +  ' (????)'
+                edu_string = edu_string + '\n' + '- ' + school_or_degree +  ' (????)'
         
     return edu_string
 
@@ -231,5 +236,7 @@ export_filepath = os.path.join(path, export_filename)
 df.to_excel(export_filepath, encoding='utf-8')
 
 # End program prompt
-input('Export complete. Hit enter to end the program.')
+input('Export complete.\n' +
+      'The exported file has the same original filename plus _output at the end.\n' +
+      'Hit enter to close the program.')
 sys.exit(0)
