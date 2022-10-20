@@ -238,5 +238,5 @@ df.to_excel(export_filepath, encoding='utf-8')
 # End program prompt
 input('Export complete.\n' +
       'The exported file has the same original filename plus _output at the end.\n' +
-      'Hit enter to close the program.')
+      'Press enter to close the program.')
 sys.exit(0)
