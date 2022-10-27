@@ -85,6 +85,10 @@ def format_exp (input_exp_string):
     and puts it into a more reader friendly format.
     """
     
+    # Skip ones that have already been formatted by recognizing the starting pattern ('- )
+    if input_exp_string[0:3] == "'- ":
+        return input_exp_string
+
     # Split the work experience string into a list at each new line
     exp_list = input_exp_string.split('\n')
     
@@ -96,13 +100,10 @@ def format_exp (input_exp_string):
     
     try:
         for exp in exp_list:
-            # Handle cases of "Profile experience" being copied over in the string.
+            # Handle cases of "Profile experience" that are sometimes inadvertently copied over in the string.
             if exp == "Profile experience":
-                print('\nWarning:\nThe text string \"Profile experience\" was found in one of the work experience entries. ' +
-                      'This string is sometimes inadvertently copied over with the experiences when cutting and pasting. ' +
-                      'All experience entry formatting has been completed, ' +
-                      'but you will need to check all entries in your output file and remove it manually.\n')
-                full_exp_split_list.append(exp)
+                continue
+   
             else:
                 title_split_list = exp.split(' at ', 1)
                 title = title_split_list[0]
@@ -110,42 +111,51 @@ def format_exp (input_exp_string):
                 exp_split_list = [title, company, period]
                 full_exp_split_list.append(exp_split_list)
     except IndexError:
-        print ('\nWarning:\nThere is an entry in one of the work experiences that is not in the proper format. ' +
+            print ('\nWarning:\nThere is an entry in one of the work experiences that is not in the proper format. ' +
                'All experiences must be in the form [title] at [company] · [period]. ' +
-               'Any entries that are not in the proper format will appear as blank cells in the returned file.\n')
+               'Any entries that are not in the proper format will appear as they were with no changes made.\n')
+            return input_exp_string
     
-    # Rebuild the work experience string (exp_string) in a more readable way
-    exp_string = ''
-
-    for idx, exp in enumerate(full_exp_split_list):  
-        # Format the first experience in the list and add them to the new string
-        if idx == 0:
-            if exp == 'Profile experience':
-                exp_string = exp_string + exp
-            else:
-                exp_string = exp_string + '- ' + exp[1] + '\n' + '  · ' + exp[0] + ' (' + exp[2] + ')'
+    else:
+        # Rebuild the work experience string (exp_string) in a more readable way
+        exp_string = ''
         
-        # Format all other experiences in the list and add them to the new string
-        else:
-            if full_exp_split_list[idx][1] == full_exp_split_list[idx-1][1]: # current and previous company check
-                new_string = '  · ' + exp[0] + ' (' + exp[2] + ')'
-                exp_string = exp_string + '\n' + new_string
+        for idx, exp in enumerate(full_exp_split_list):  
+            # Format the first experience in the list and add them to the new string
+            if idx == 0:
+                if exp[0] == "'":
+                    exp = exp.lstrip("'")
+                exp_string = exp_string + '- ' + exp[1] + '\n' + '  · ' + exp[0] + ' (' + exp[2] + ')'
+            
+            # Format all other experiences in the list and add them to the new string
             else:
-                new_string = '- ' + exp[1] + '\n' + '  · ' + exp[0] + ' (' + exp[2] + ')'
-                exp_string = exp_string + '\n' + new_string
-                
-    return exp_string
+                if full_exp_split_list[idx][1] == full_exp_split_list[idx-1][1]: # current and previous company check
+                    new_string = '  · ' + exp[0] + ' (' + exp[2] + ')'
+                    exp_string = exp_string + '\n' + new_string
+                else:
+                    new_string = '- ' + exp[1] + '\n' + '  · ' + exp[0] + ' (' + exp[2] + ')'
+                    exp_string = exp_string + '\n' + new_string
+                    
+        return exp_string
 
 # Format the work experience
 df[work_exp_column_name] = df[work_exp_column_name].apply(format_exp)
 
 # Education formatter function
 def format_edu (input_edu_string):
-    """Takes a education input string, as cut-and-pasted from LinkedIn Recruiter results page, 
+    """Takes an education input string, as cut-and-pasted from LinkedIn Recruiter results page, 
     and puts into a more reader friendly format.
     """
+
+    # Skip ones that have already been formatted by recognizing the starting pattern ('- )
+    if input_edu_string[0:3] == "'- ":
+        return input_edu_string
+
     # Split the education string into a list at each new line
     edu_list = input_edu_string.split('\n')
+
+    if edu_list[0] == "Profile education":
+        edu_list.remove("Profile education")
     
     # Initiate a string to hold all the education in a new format
     edu_string = ''
@@ -157,17 +167,13 @@ def format_edu (input_edu_string):
     # and only the degree and/or period, if entered, show up.  
     # These different cases are all handled below. 
     for idx, edu in enumerate(edu_list):
-        # Print a warning if "Profile education" is present in the education entry.
-        if edu == "Profile education":
-            print('\nWarning:\nThe text string \"Profile education\" was found in one of the education entries. ' +
-                  'This string is sometimes inadvertently copied over with the education when cutting and pasting. ' +
-                  'All education entry formatting has been completed, ' +
-                  'but you will need to check all entries in your output file and remove it manually.\n')
-        
+
         if (',' in edu) and ('·' in edu): # All parts of the education list exist
             school, degree_period_list = edu.rsplit(', ', 1) # rsplit used to account for comma in school name case
             degree, period = degree_period_list.split(' · ')
             if idx == 0:
+                if edu[0] == "'":
+                    edu = edu.lstrip("'")
                 edu_string = edu_string + '- ' + degree + ': ' + school +  ' (' + period + ')'
             else:
                 edu_string = edu_string + '\n' + '- ' + degree + ': ' + school +  ' (' + period + ')'
@@ -213,7 +219,6 @@ def format_edu (input_edu_string):
         
     return edu_string
 
-
 # Format the education
 df[education_column_name] = df[education_column_name].apply(format_edu)
 
@@ -223,9 +228,12 @@ def add_quote(input_string):
     input_string = '\'' + input_string
     return input_string
 
-# Add the quotes
-df[education_column_name] = df[education_column_name].apply(add_quote)
-df[work_exp_column_name] = df[work_exp_column_name].apply(add_quote)
+# Add initial quotes to any entry that doesn't already have them
+edu_mask = df['Education'].str.startswith("'", na=False) == False
+df.loc[edu_mask, 'Education'] = df.loc[edu_mask]['Education'].apply(add_quote)
+
+exp_mask = df['Work Experience'].str.startswith("'", na=False) == False
+df.loc[exp_mask, 'Work Experience'] = df.loc[exp_mask]['Work Experience'].apply(add_quote)
 
 # Build the full export filepath including a new 'output' file
 path, filename = os.path.split(filepath)
@@ -233,7 +241,7 @@ export_filename = filename.split('.')[0] + '_output' + '.xlsx'
 export_filepath = os.path.join(path, export_filename)
 
 # Export (to original filepath)
-df.to_excel(export_filepath, encoding='utf-8')
+df.to_excel(export_filepath)
 
 # End program prompt
 input('Export complete.\n' +
