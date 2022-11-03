@@ -39,7 +39,7 @@ try:
 
 except FileNotFoundError:
     print('\nFolder or Filename Error:\nThe folder path and/or filename entered does not exist. ' +
-          'Format example: C:\\Users\\username\\foldername\\filename.xlsx' +
+          'Format example: C:\\Users\\username\\foldername\\filename.xlsx\n' +
           'Please check and try again.')
     input('Press enter to exit.')
     sys.exit(1)
@@ -85,9 +85,22 @@ def format_exp (input_exp_string):
     and puts it into a more reader friendly format.
     """
     
+    # If cells containing an initial single quote are clicked on excel, 
+    # those single quotes are no longer recognized at import into pandas.
+    # So need to add it back if the first character is a dash, 
+    # as it will be in the ones that are already formatted.
+    try:
+        if input_exp_string[0] == "-":
+            input_exp_string = "'" + input_exp_string
+    except IndexError:
+        pass
+
     # Skip ones that have already been formatted by recognizing the starting pattern ('- )
-    if input_exp_string[0:3] == "'- ":
-        return input_exp_string
+    try:
+        if input_exp_string[0:3] == "\'- ":
+            return input_exp_string
+    except IndexError:
+        pass
 
     # Split the work experience string into a list at each new line
     exp_list = input_exp_string.split('\n')
@@ -147,9 +160,21 @@ def format_edu (input_edu_string):
     and puts into a more reader friendly format.
     """
 
+    # If cells containing an initial single quote are clicked on excel, 
+    # those single quotes are no longer recognized at import into pandas.
+    # So need to add it back if missing.
+    try:
+        if input_edu_string[0] == "-":
+            input_edu_string = "\'" + input_edu_string
+    except IndexError:
+        pass
+
     # Skip ones that have already been formatted by recognizing the starting pattern ('- )
-    if input_edu_string[0:3] == "'- ":
-        return input_edu_string
+    try:
+        if input_edu_string[0:3] == "\'- ":
+            return input_edu_string
+    except IndexError:
+        pass
 
     # Split the education string into a list at each new line
     edu_list = input_edu_string.split('\n')
@@ -222,17 +247,18 @@ def format_edu (input_edu_string):
 # Format the education
 df[education_column_name] = df[education_column_name].apply(format_edu)
 
-# Function to add an initial quote at the start of each education and experience, 
+# Function to add an initial quote at the start of education and experience, 
 # so excel recognizes them as text not formulas.
 def add_quote(input_string):
     input_string = '\'' + input_string
     return input_string
 
-# Add initial quotes to any entry that doesn't already have them
-edu_mask = df['Education'].str.startswith("'", na=False) == False
+# Add initial quotes to any newly added entry starting with a dash 
+# that doesn't already have an initial quote
+edu_mask = df['Education'].str.startswith("-", na=False) == True
 df.loc[edu_mask, 'Education'] = df.loc[edu_mask]['Education'].apply(add_quote)
 
-exp_mask = df['Work Experience'].str.startswith("'", na=False) == False
+exp_mask = df['Work Experience'].str.startswith("-", na=False) == True
 df.loc[exp_mask, 'Work Experience'] = df.loc[exp_mask]['Work Experience'].apply(add_quote)
 
 # Build the full export filepath including a new 'output' file
@@ -241,7 +267,13 @@ export_filename = filename.split('.')[0] + '_output' + '.xlsx'
 export_filepath = os.path.join(path, export_filename)
 
 # Export (to original filepath)
-df.to_excel(export_filepath)
+try:
+    df.to_excel(export_filepath)
+except PermissionError:
+    print('Error: The file you are trying to write to is open. ' +
+          'Close the file and try again.')
+    input('Press enter to exit.')
+    sys.exit(1)
 
 # End program prompt
 input('Export complete.\n' +

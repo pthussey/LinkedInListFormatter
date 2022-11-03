@@ -1,0 +1,2 @@
+1) Set up and activate an environment : see "executable building" snippets on github
+2) Use the pyinstaller --onefile myscript.py command with a full path to the python file
