@@ -15,12 +15,14 @@ print('This program accepts an excel file (.xlxs) ' +
       'cut-and-pasted from LinkedIn Recruiter results pages ' +
       'and puts the entries into an easier to read format.\n')
 
-filepath = input('Enter the path to your file, ' +
-                 'including the filename with the filetype extension: ')
+# Accept the path and filename and build the filepath to pass into pandas
+path = input('Enter the path to the folder that contains your file: ')
+filename = input('Enter the filename including the filetype extension: ')
+filepath = os.path.join(path, filename)
 
-# Check that extension is xlsx
+# Check that extension is included and is xlsx
 try:
-    extension = os.path.split(filepath)[1].split('.')[1]
+    extension = filename.split('.')[1]
 except IndexError:
     print('\nError:\nPlease ensure that the file extension ' +
           'is included in the filename and try again.')
@@ -38,8 +40,9 @@ try:
     df = pd.read_excel(filepath)
 
 except FileNotFoundError:
-    print('\nFolder or Filename Error:\nThe folder path and/or filename entered does not exist. ' +
-          'Format example: C:\\Users\\username\\foldername\\filename.xlsx\n' +
+    print('\nFolder or Filename Error:\nThe folder path and/or filename entered does not exist.\n' +
+          'Folder path format example: C:\\Users\\username\\foldername\n' +
+          'Filename format example: filename.xlsx\n' +
           'Please check and try again.')
     input('Press enter to exit.')
     sys.exit(1)
@@ -47,28 +50,52 @@ except FileNotFoundError:
 work_exp_column_name = input('Enter the column name that contains ' +
                              'the work experience entries: ')
 
-education_column_name = input('Enter the column name that contains ' +
-                              'the education entries: ')
-
-# Replace carriage returns + line feeds with just line feeds.
+# Replace carriage returns + line feeds with just line feeds for the work experience.
 # Also check the column entries while doing this.
 try:
     df[work_exp_column_name] = df[work_exp_column_name].str.replace('\r\n', '\n')
 
 except KeyError:
     print('\nKey Error:\nThe column name provided for the work experience entries does not exist. ' +
-          'Please check the name and try again.')
-    input('Press enter to exit.')
-    sys.exit(1)
+          'Please check the name and try one more time.')
 
+    # One more chance to enter the work experience column name
+    work_exp_column_name = input('Enter the column name that contains ' +
+                                 'the work experience entries: ')
+
+    try:
+        df[work_exp_column_name] = df[work_exp_column_name].str.replace('\r\n', '\n')
+    
+    except KeyError:
+        print('\nKey Error:\nThe column name provided for the work experience entries does not exist. ' +
+              'Please check the name and try again.')
+        input('Press enter to exit.')
+        sys.exit(1)
+
+education_column_name = input('Enter the column name that contains ' +
+                              'the education entries: ')
+
+# Replace carriage returns + line feeds with just line feeds for the education.
+# Also check the column entries while doing this.
 try:
     df[education_column_name] = df[education_column_name].str.replace('\r\n', '\n')
 
 except KeyError:
     print('\nKey Error:\nThe column name provided for the education entries does not exist. ' +
-          'Please check the name and try again.')
-    input('Press enter to exit.')
-    sys.exit(1)
+          'Please check the name and try one more time.')
+    
+    # One more chance to enter the educaion column name
+    education_column_name = input('Enter the column name that contains ' +
+                                  'the education entries: ')
+    
+    try:
+        df[education_column_name] = df[education_column_name].str.replace('\r\n', '\n')
+
+    except KeyError:
+        print('\nKey Error:\nThe column name provided for the education entries does not exist. ' +
+              'Please check the name and try again.')
+        input('Press enter to exit.')
+        sys.exit(1)
 
 # Replace carriage returns with just line feeds
 df[work_exp_column_name] = df[work_exp_column_name].str.replace('\r', '\n')
@@ -262,11 +289,10 @@ exp_mask = df['Work Experience'].str.startswith("-", na=False) == True
 df.loc[exp_mask, 'Work Experience'] = df.loc[exp_mask]['Work Experience'].apply(add_quote)
 
 # Build the full export filepath including a new 'output' file
-path, filename = os.path.split(filepath)
 export_filename = filename.split('.')[0] + '_output' + '.xlsx'
 export_filepath = os.path.join(path, export_filename)
 
-# Export (to original filepath)
+# Export (to original folder)
 try:
     df.to_excel(export_filepath)
 except PermissionError:
