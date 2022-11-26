@@ -140,6 +140,8 @@ def format_exp (input_exp_string):
     # pull out the title, company, and period and put them in a list, 
     # then append each list to a full experience list, 
     # creating a nested list.
+
+    # Initiate the full experience list
     full_exp_split_list = []
     
     try:
@@ -164,8 +166,8 @@ def format_exp (input_exp_string):
                 full_exp_split_list.append(exp_split_list)
     except (IndexError, ValueError):
             print ('\nWarning:\nThere is an entry in one of the work experiences that is not in the proper format. ' +
-               'All experiences must be in the form [title] at [company] · [period]. ' +
-               'Any entries that are not in the proper format will appear as they were with no changes made.\n')
+                   'All experiences must be in the form [title] at [company] · [period]. ' +
+                   'Any entries that are not in the proper format will appear as they were with no changes made.\n')
             return input_exp_string
     
     else:
