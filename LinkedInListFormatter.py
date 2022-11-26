@@ -1,6 +1,7 @@
 """Reads an excel file that contains education and work experience 
 cut-and-pasted from LinkedIn Recruiter results lists, 
 and outputs the education and work experience entries in a more readable format. 
+Any entries that start with a dash(-) are considered to be already formatted and are left unchanged. 
 Note that the education output can have some arrangement problems that need to be fixed 
 in cases when the original input string has commas used in the degree name.
 """
@@ -13,7 +14,10 @@ import os
 print('This program accepts an excel file (.xlxs) ' +
       'with work experience and education entries ' +
       'cut-and-pasted from LinkedIn Recruiter results pages ' +
-      'and puts the entries into an easier to read format.\n')
+      'and puts the entries into an easier to read format. ' +
+      'Any entries that start with a dash(\'-) ' +
+      'are considered to be already formatted ' +
+      'and are left unchanged.\n')
 
 # Accept the path and filename and build the filepath to pass into pandas
 path = input('Enter the path to the folder that contains your file: ')
@@ -143,14 +147,22 @@ def format_exp (input_exp_string):
             # Handle cases of "Profile experience" that are sometimes inadvertently copied over in the string.
             if exp == "Profile experience":
                 continue
-   
+            
+            # Replace cases of 'no backspace' characters, somehow added by Excel in some cases, with regular spaces.
+            if '\xa0' in exp:
+                exp = exp.replace('\xa0', ' ')
+            
+            # Handle cases of additional line feeds inadvertently added that create empty string entries.
+            if exp == '':
+                continue
+
             else:
                 title_split_list = exp.split(' at ', 1)
                 title = title_split_list[0]
                 company, period = title_split_list[1].rsplit(' · ', 1)
                 exp_split_list = [title, company, period]
                 full_exp_split_list.append(exp_split_list)
-    except IndexError:
+    except (IndexError, ValueError):
             print ('\nWarning:\nThere is an entry in one of the work experiences that is not in the proper format. ' +
                'All experiences must be in the form [title] at [company] · [period]. ' +
                'Any entries that are not in the proper format will appear as they were with no changes made.\n')
@@ -163,8 +175,10 @@ def format_exp (input_exp_string):
         for idx, exp in enumerate(full_exp_split_list):  
             # Format the first experience in the list and add them to the new string
             if idx == 0:
+                # Remove any initial quotes that might exist at the start of the entry
                 if exp[0] == "'":
                     exp = exp.lstrip("'")
+                
                 exp_string = exp_string + '- ' + exp[1] + '\n' + '  · ' + exp[0] + ' (' + exp[2] + ')'
             
             # Format all other experiences in the list and add them to the new string
@@ -220,9 +234,27 @@ def format_edu (input_edu_string):
     # These different cases are all handled below. 
     for idx, edu in enumerate(edu_list):
 
+        # Remove any initial quotes that might exsit at the start of the entry
+        if idx ==0:
+            try:
+                if edu[0] == "'":
+                    edu = edu.lstrip("'")
+            except IndexError:
+                pass
+        
+        # Replace cases of 'no backspace' characters, somehow added by Excel in some cases, with regular spaces.
+        if '\xa0' in edu:
+            edu = edu.replace('\xa0', ' ')
+
         if (',' in edu) and ('·' in edu): # All parts of the education list exist
-            school, degree_period_list = edu.rsplit(', ', 1) # rsplit used to account for comma in school name case
-            degree, period = degree_period_list.split(' · ')
+            try:
+                school, degree_period_list = edu.rsplit(', ', 1) # rsplit used to account for comma in school name case
+                degree, period = degree_period_list.split(' · ')
+            except ValueError:
+                print('\nWarning:\nThere is an education entry that is not in the proper format. ' +
+                      'Any entries that are not in the proper format will appear as they were with no changes made.\n')
+                return input_edu_string
+            
             if idx == 0:
                 if edu[0] == "'":
                     edu = edu.lstrip("'")
@@ -231,7 +263,13 @@ def format_edu (input_edu_string):
                 edu_string = edu_string + '\n' + '- ' + degree + ': ' + school +  ' (' + period + ')'
 
         elif (',' in edu) and ('·' not in edu): # The school AND degree exist, but not the period
-            school, degree = edu.rsplit(', ', 1) # rsplit used to account for comma in school name case
+            try:
+                school, degree = edu.rsplit(', ', 1) # rsplit used to account for comma in school name case
+            except ValueError:
+                print('\nWarning:\nThere is an education entry that is not in the proper format. ' +
+                      'Any entries that are not in the proper format will appear as they were with no changes made.\n')
+                return input_edu_string
+            
             if idx == 0:
                 edu_string = edu_string + '- ' + degree + ': ' + school +  ' (????)'
             else:
@@ -282,11 +320,11 @@ def add_quote(input_string):
 
 # Add initial quotes to any newly added entry starting with a dash 
 # that doesn't already have an initial quote
-edu_mask = df['Education'].str.startswith("-", na=False) == True
-df.loc[edu_mask, 'Education'] = df.loc[edu_mask]['Education'].apply(add_quote)
+edu_mask = df[education_column_name].str.startswith("-", na=False) == True
+df.loc[edu_mask, education_column_name] = df.loc[edu_mask][education_column_name].apply(add_quote)
 
-exp_mask = df['Work Experience'].str.startswith("-", na=False) == True
-df.loc[exp_mask, 'Work Experience'] = df.loc[exp_mask]['Work Experience'].apply(add_quote)
+exp_mask = df[work_exp_column_name].str.startswith("-", na=False) == True
+df.loc[exp_mask, work_exp_column_name] = df.loc[exp_mask][work_exp_column_name].apply(add_quote)
 
 # Build the full export filepath including a new 'output' file
 export_filename = filename.split('.')[0] + '_output' + '.xlsx'
