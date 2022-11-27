@@ -111,9 +111,11 @@ df[education_column_name] = df[education_column_name].fillna('')
 
 
 # Experience formatter function
-def format_exp (input_exp_string):
+def format_exp (input_exp_string, i):
     """Takes a work experience input string, as cut-and-pasted from LinkedIn Recruiter results page, 
     and puts it into a more reader friendly format.
+    Also takes in the index of the dataframe row 
+    so it can be returned when a warning message is sent about unformatted entries.
     """
     
     # If cells containing an initial single quote are clicked on excel, 
@@ -165,7 +167,7 @@ def format_exp (input_exp_string):
                 exp_split_list = [title, company, period]
                 full_exp_split_list.append(exp_split_list)
     except (IndexError, ValueError):
-            print ('\nWarning:\nThere is an entry in one of the work experiences that is not in the proper format. ' +
+            print ('\nWarning:\nThe work experience at index \'{}\' is not in the proper format. '.format(i) +
                    'All experiences must be in the form [title] at [company] · [period]. ' +
                    'Any entries that are not in the proper format will appear as they were with no changes made.\n')
             return input_exp_string
@@ -195,12 +197,17 @@ def format_exp (input_exp_string):
         return exp_string
 
 # Format the work experience
-df[work_exp_column_name] = df[work_exp_column_name].apply(format_exp)
+# Using a for loop instead of 'apply' in order to pass the index into the formatter function
+# This index is used to inform the user which row has data that is not in the proper format
+for i in df.index:
+    df.loc[i, work_exp_column_name] = format_exp(df.loc[i, work_exp_column_name], i)
 
 # Education formatter function
-def format_edu (input_edu_string):
+def format_edu(input_edu_string, i):
     """Takes an education input string, as cut-and-pasted from LinkedIn Recruiter results page, 
     and puts into a more reader friendly format.
+    Also takes in the index of the dataframe row 
+    so it can be returned when a warning message is sent about unformatted entries.
     """
 
     # If cells containing an initial single quote are clicked on excel, 
@@ -253,7 +260,7 @@ def format_edu (input_edu_string):
                 school, degree_period_list = edu.rsplit(', ', 1) # rsplit used to account for comma in school name case
                 degree, period = degree_period_list.split(' · ')
             except ValueError:
-                print('\nWarning:\nThere is an education entry that is not in the proper format. ' +
+                print('\nWarning:\nThe education entry at index \'{}\' is not in the proper format. '.format(i) +
                       'Any entries that are not in the proper format will appear as they were with no changes made.\n')
                 return input_edu_string
             
@@ -268,7 +275,7 @@ def format_edu (input_edu_string):
             try:
                 school, degree = edu.rsplit(', ', 1) # rsplit used to account for comma in school name case
             except ValueError:
-                print('\nWarning:\nThere is an education entry that is not in the proper format. ' +
+                print('\nWarning:\nThe education entry at index \'{}\' is not in the proper format. '.format(i) +
                       'Any entries that are not in the proper format will appear as they were with no changes made.\n')
                 return input_edu_string
             
@@ -312,7 +319,10 @@ def format_edu (input_edu_string):
     return edu_string
 
 # Format the education
-df[education_column_name] = df[education_column_name].apply(format_edu)
+# Using a for loop instead of 'apply' in order to pass the index into the formatter function
+# This index is used to inform the user which row has data that is not in the proper format
+for i in df.index:
+    df.loc[i, education_column_name] = format_edu(df.loc[i, education_column_name], i)
 
 # Function to add an initial quote at the start of education and experience, 
 # so excel recognizes them as text not formulas.
