@@ -1,0 +1,296 @@
+Location	First Name	Last Name	Korean Name	Age	Korean Ability	Education	Work Experience	Email Address	Phone Number	LinkedIn Profile URL	Notes
+Portland, Oregon	Irene	Hwang				"'- Master of Business Administration (MBA): Stanford University Graduate School of Business (????)
+- Stanford University (????)"	"- Nike
+  · Vice President, Consumer Insights, Scaled Insights & Analytics (2020 – Present)
+  · Senior Director, Nike Direct Business Analytics (2020 – 2020)
+  · Senior Director, Global Digital Commerce Business and Consumer Analytics (2017 – 2020)
+  · Senior Director, Consumer Knowledge & Insights, Brand Marketing, North America & Key Global Cities (2015 – 2017)
+- Athleta
+  · Senior Director of Growth Strategy, Operating Strategy, Analytics and Consumer Insights (2010 – 2015)
+- Growth, Innovation & Digital
+  · Manager, Growth Initiatives (2006 – 2010)
+- Gap
+  · Manager, Gap International Business Development (2004 – 2006)
+- Yahoo! Korea
+  · Corporate Development and Strategy (2003)
+- Morgan Stanley
+  · Investment Banking Analyst (2000 – 2002)
+- Donaldson, Lufkin & Jenrette
+  · High Yield Research Analyst (1998 – 2000)
+- Embassy of the Republic of Korea
+  · Economic/Trade Analyst (1997 – 1998)"			https://www.linkedin.com/in/irene-hwang	
+London	Sunny (Seung A)	Lee			Native or bilingual	"NYU Stern School of Business, MBA · 2010 – 2012
+HKUST Business School, MBA Exchange
+SDA Bocconi, Doing Business in Italy
+Boston College Carroll School of Management, B.S.
+Leysin American School in Switzerland, International Baccalaureate Diploma Program"	"VP, Head of Digital Commerce & Operations, APAC E-Commerce at Ralph Lauren · 2021 – Present
+Senior Director, Channel Development, APAC E-commerce at Ralph Lauren Asia Pacific Limited · 2018 – 2021
+Director, Channel Development, APAC E-commerce at Ralph Lauren · 2016 – 2018
+Channel Development, APAC E-Commerce at Ralph Lauren · 2015 – 2016
+Strategic Development, APAC E-commerce at Ralph Lauren · 2012 – 2015
+Digital Marketing & e-Commerce Strategy at CHANEL · 2011
+Global Marketing Strategy at LG Electronics · 2008 – 2010
+International Business at DDB Group Korea · 2006 – 2008"			https://hk.linkedin.com/in/sunleey	
+Korea	Helen	Yoon			Native or bilingual	"'- 학사 (B.A.): Ewha Womans University (1992 – 1996)
+- Daewon Foreign Language High School (1992)"	"'- Coupang
+  · Vice President (2020 – Present)
+  · Sr. Director of E-commerce, Retail / Sr. Category Leader (2019 – 2020)
+  · Sr. Director of E-commerce, Retail / Sr. Category Leader (2016 – 2019)
+  · Director of E-commerce, Retail / Category Leader (2016 – 2016)
+  · Director of E-commerce, Retail / Selection Planning (2015 – 2015)
+  · Group Lead (2014 – 2015)
+  · Business Unit Lead (2014 – 2014)
+- Tesco PLC
+  · Homeplus Merchandising / Buying Leader (2013 – 2014)
+- W.S. International Company Ltd.
+  · MD Senior Mgr. (2007 – 2012)
+- (주)이마트 (EMART Inc.)
+  · Buyer / Mgr. (2006 – 2007)
+- Walmart
+  · Buyer / Mgr. (1998 – 2006)
+- Ogilvy & Mather Advertising
+  · Assistant to CEO (Korad, Ogilvy & Mather) (1996 – 1998)"			https://kr.linkedin.com/in/helen-yoon-%EC%9C%A4%ED%98%9C%EC%98%81-509333b4	
+Los Angeles	Joyce	Ha			Native or bilingual	'- Bachelor of Arts - BA: University of California, Berkeley (????)	"'- Vans, a VF Company
+  · VP, Global Product Management & Merchandising, Apparel (2021 – Present)
+  · VP, Global Product- Men's & Active Apparel (2018 – 2021)
+- Vans a Division of VF Outdoor
+  · VP, Product & E-commerce Development (2016 – 2018)
+  · Product Director - Asia Pacific (2012 – 2016)
+- Levi Strauss & Co.
+  · Senior Buyer Merchant Menswear, ANZ / Senior Merchandising Manager, APAC / Product Manager, APAC (2008 – 2012)
+- Macy's Merchandising Group
+  · Brand Analyst (2006 – 2008)
+- The North Face
+  · Senior Retail Analyst ('05-'06) / Forecast Analyst II ('04-'05) / RFSM Analyst ('04-'03) (2003 – 2006)"			https://www.linkedin.com/in/joycewonha	
+Korea	Soonho	Chung			Native or bilingual	"'- Master of Business Administration (MBA): Korea Advanced Institute of Science and Technology (2014 – 2017)
+- Bachelor of Business Administration (BBA): Konkuk University (1995 – 2002)"	"'- LG Electronics
+  · Vice President - Global Digital Commerce and Marketing (2021 – Present)
+- Nike
+  · Global Digital Commerce - Nike.com International Expansion and vendor innovation management (2020 – 2021)
+  · Global Digital Business Lead for Running/Training (2018 – 2020)
+  · Nike.com GM/Director_상무 (2015 – 2018)
+  · Nike Owned Store GM/Director (2012 – 2015)
+  · Nike.com Manager (2009 – 2012)
+  · Business Planning Analyst (2007 – 2009)
+  · Credit Analyst (2004 – 2006)
+- Grand Hyatt Seoul
+  · Operation Analyst (2002 – 2004)"			https://kr.linkedin.com/in/soonho-chung-74828061	
+New York	Vince	Koh			Native or bilingual	"'- Master of Business Administration (MBA): Cornell University (2009 – 2011)
+- Certificate: London College of Fashion, University of the Arts London (????)
+- Bachelor of Arts (BA): Case Western Reserve University (????)"	"'- Amazon Web Services (AWS)
+  · WW Head of Digital Commerce (2021 – Present)
+- Weber Shandwick
+  · SVP, Commerce and Conversion | Marketing Technology (2019 – 2020)
+  · Senior Vice President, Commerce and Conversion (2018 – 2020)
+- Iconix Brand Group
+  · Vice President, eCommerce (2017 – 2018)
+- Keaton Row
+  · Head of Merchandising and Operations (2015 – 2017)
+- SurfLabs
+  · Co-Founder & Chief Product Officer (2013 – 2017)
+- Fab.com
+  · Senior Director, Strategy and Analytics | US & EU (2013 – 2015)
+  · Director, Merchandise Planning and Analytics (2012 – 2013)
+- Victorinox
+  · Director, Merchandise Planning and Buying | North America Retail & eCommerce (2011 – 2012)
+- Accenture
+  · Manager, Management Consulting | Global Retail Practice (2010 – 2011)
+- Longchamp
+  · Manager, Buying and Merchandising | US Retail & eCommerce (2007 – 2010)
+- Barneys New York
+  · Merchandise Buyer | Contemporary Menswear (2005 – 2007)
+- Ted Baker
+  · Retail Merchandiser (2004 – 2006)
+- Abercrombie & Fitch Co.
+  · Manager-In-Training | Marketing & Merchandising (2002 – 2004)"			https://www.linkedin.com/in/vincek 	
+Atlanta	Jean	Cho			?	"'- MBA: Stanford University Graduate School of Business (????)
+- BA: Georgetown University (????)"	"'- Sid Mashburn and Ann Mashburn
+  · Chief Executive Officer (2022 – Present)
+  · Senior Vice President, Retail, E-Commerce & Marketing (2019 – Present)
+  · Vice President, E-Commerce (2016 – Present)
+  · Sr. Director, E-Commerce (2014 – 2016)
+- Carter's | OshKosh B'gosh
+  · Sr. Director, International Merchandising (2012 – 2014)
+- Gap
+  · Director of Merchandising, Men's Apparel (2010 – 2012)
+- Old Navy
+  · Director of Merchandising, Non-apparel (2007 – 2010)
+- Pottery Barn
+  · Buyer, Home furnishings and Textiles, Direct-to-Consumer (2006 – 2007)
+- Gap Inc.
+  · Sr. Merchandiser (2002 – 2006)"			https://www.linkedin.com/in/jean-cho-371a3	The Sid and Ann Mashburn store is considered the best men's clothing store in America by GQ Magazine
+Portland, Oregon	SoHee	Kim			Native or bilingual	'-  (????)	"'- Nike
+  · Director of Merchandising - M’s Global FW for Unite (2022 – Present)
+  · Global Consumer planning- M’s FW (Running & Basketball) (2020 – 2022)
+  · Director DMM NSO- Nike Direct Merchandising APLA (2018 – 2020)
+  · Director Nike Store Merch - Nike Sport & ROM Nike Direct Merch APLA (2017 – 2018)
+- Nike Korea LLC
+  · Planning Manager-DSM (2016 – 2017)
+  · General Merchandise Manager Nike DTC (2015 – 2016)
+  · Merchandising Team Manager - Merchandising (2011 – 2015)
+  · Merchandiser and Product line manager (2004 – 2011)"			https://www.linkedin.com/in/sohee-kim-180610205	
+New York	Chi	Kim			?	'- Bachelor of Fine Arts (BFA) (????)	"'- BALENCIAGA
+  · Regional Vice President (2021 – Present)
+  · Omnichannel Project Management, Americas (2021 – Present)
+  · Retail Performance Manager and Omnichannel Client Engagement, Americas (2018 – 2021)
+  · US Retail Excellence and Retail Operations Manager (2015 – 2018)
+  · New York District Manager (2013 – 2015)
+- Prada Group
+  · General Management (2002 – 2012)"			https://www.linkedin.com/in/chi-kim-a3966697	
+China	YoungAh	Kim			Native or bilingual	'- Fashion Merchandising (1995 – 2000)	"- adidas
+  · Vice President Global Merchandising (2022 – Present)
+  · Sr. director BU training - Adidas Apac & GCA (2019 – 2022)
+- Chinaccelerator, Mentor at MOX at Chinaccelerator 中国加速
+  · Mentor (2019 – 2020)
+- Crocs
+  · Head of Merchandising & Commercial Director (2017 – 2019)
+- adidas
+  · Retail Merchandising Director (2013 – 2017)
+- Nike
+  · Assortment Planning Head (2011 – 2013)
+  · Business Planning Manager (2008 – 2011)
+  · BU/Apparel Brand Merchandising Manager (2008 – 2008)
+  · Directive Retail Assortment Planner (2005 – 2008)
+- Fila
+  · Product Line Manager (2003 – 2005)
+- Gap
+  · Merchant (1999 – 2003)
+- Deco; Korean premium w’s apparel brand
+  · Designer Intership (1999 – 1999)"			https://cn.linkedin.com/in/youngah-kim-43187151	
+Korea	Sunghan (Jack)	Lee			Native or bilingual	'- MA - Business Administration: Seoul National University (????)	"'- Coupang
+  · Sr. Director (전무) (2022 – Present)
+- 아마존
+  · Country head of KR GS (대표) & Region head of RSEA GS (based SG/MY and TH teams) (2021 – 2022)
+- Amazon
+  · Country Head of Global Selling - Korea (대표이사) (2019 – 2021)
+- Mundipharma
+  · Regional Lead - Oncology and supportive care (2018 – 2019)
+  · Business Unit Director (2017 – 2019)
+- RB
+  · Global Director as Top 400 - eCommerce (Digital Sales) (2015 – 2017)
+  · Global Brand Marketing Manager (Global director as Top 400) (2014 – 2015)
+  · Head of eCommerce (2013 – 2014)
+  · Marketing Manager (2009 – 2012)
+  · Global Senior Brand Manager (2007 – 2008)
+  · Brand Manager (2004 – 2007)
+- Nielsen
+  · Senior Account Manager (2002 – 2004)"			https://kr.linkedin.com/in/sunghan-jack-lee-10b74b39	5yrs in UK at RB
+Portland, Oregon	Yeojin	Yoon			Native or bilingual		"'- Nike
+  · VP Marketplace Merchandising Asia Pacific and Latin America (2003 – Present)"			https://www.linkedin.com/in/yeojin-yoon-1a5b1b61	
+Korea	Jihye	Song			Native or bilingual	"Profile education
+Harvard Business School, Master of Business Administration (MBA) · 2003 – 2005
+Yonsei University, BA · 1994 – 1998"	"Head of Kakao Talk (카카오톡 부문장/부사장) at Kakao Corp · 2022 – Present
+Head of Marketing (마케팅 실장/부사장) at Kakao Corp · 2022 – 2022
+Head of Commerce Strategy at Kakao Corp · 2021 – 2022
+Chief Strategy Officer (CSO), Executive Vice President at Hugel Inc. · 2020 – 2021
+Head of cosmetics, Senior Managing Director at Hugel Inc. · 2018 – 2021
+Partner at Bain & Company · 2005 – 2018
+Senior Associate Consultant at Bain & Company · 2001 – 2003
+Sales producer at Yahoo · 2000 – 2000
+Account Executive at Diamond Ad. (금강기획) · 1998 – 1999"			https://kr.linkedin.com/in/jihye-song-2961a	
+Chicago	Winnie	Park			Limited working proficiency	"'- Woodrow Wilson School of Public and International Affairs: Princeton University, B.A. (1989 – 1993)
+- Master of Business Administration - MBA: Northwestern University (1997 – 1999)"	"'- Forever 21
+  · Chief Executive Officer (2022 – Present)
+- Dollar Tree Stores
+  · Independent Board Director, Member Audit Committee (2020 – Present)
+- EXPRESS
+  · Independent Board Director, Member Audit Committee (2018 – Present)
+- Paper Source
+  · CEO (2015 – 2022)
+- DFS Group Limited
+  · EVP, Marketing (2006 – 2015)
+  · Global VP Fashion (2008 – 2012)
+- Levi Strauss & Co.
+  · Senior Director, Merchandising (2004 – 2008)
+- McKinsey & Company
+  · Engagement Manager (1999 – 2004)
+- Princeton Project 55 Inc
+  · Executive Director (1993 – 1997)"			https://www.linkedin.com/in/winnie-park-b0a771105	
+New York	Jennifer	 Sunwoo			?	'- Fine Arts; Bachelor of Science - Marketing: The Wharton School, Bachelor of Arts - Art History (1997)	"'- UNIQLO
+  · Senior Vice President, Women's R&D Global (2021 – Present)
+- Barneys New York
+  · Chief Merchandising Officer (2017 – 2019)
+  · Executive Vice President, General Merchandise Manager and Global Licensing (2013 – 2016)
+  · Senior Vice President, Divisional Merchandise Manager (2011 – 2013)
+- Bergdorf Goodman
+  · Vice President, Divisional Merchandise Manager (1999 – 2011)
+- J.Crew
+  · Associate Merchandiser (1997 – 1999)"			https://www.linkedin.com/in/jennifer-sunwoo-5ba8289	
+Los Angeles	Sean	Kim			Professional working proficiency	'- Bachelor: University of Southern California (1988 – 1994)	"'- Ralph Lauren
+  · Head of Retail - West Region (2020 – Present)
+- Gucci Korea
+  · GM , President (사장) (2019 – 2020)
+- Gucci Japan
+  · Director - Retail Divison (2016 – 2019)
+- Wynn Macau
+  · Vice President of Retail (2014 – 2015)
+- Loro Piana
+  · West Coast Regional Director (2011 – 2014)
+- Louis Vuitton
+  · Area Director (2008 – 2011)
+  · Director of Marketing and Communications (2007 – 2008)
+- Celine Inc
+  · Regional Manager (2004 – 2007)
+- Louis Vuitton
+  · Store Manager (1995 – 2004)"			https://www.linkedin.com/in/sean-kim-9053389	
+London	Peter	Kim			Worked at Cheil in Korea so probably speaks Korean but might need to check	"'- BA: University of Pennsylvania (????)
+- MBA: University of Virginia Darden School of Business (????)"	"'- The Bicester Collection
+  · Chief Marketing Officer (2020 – Present)
+  · Digital Experience Director (2019 – 2020)
+- LEGO Group
+  · Global VP, Digital Consumer Engagement (2016 – 2019)
+- Samsung Group
+  · Interim Chief Executive Officer, Barbarian Group (2016)
+  · Chief Digital Officer, Cheil Worldwide (2014 – 2016)
+- Dachis Group
+  · Chief Strategy Officer (2008 – 2014)
+- Forrester
+  · Senior Analyst, Marketing Leadership (2007 – 2008)
+  · Senior Analyst, Interactive Marketing (2005 – 2007)
+- PUMA
+  · International Marketing Operations Manager (2003 – 2004)
+  · Head of Global Digital Marketing and eCommerce (2001 – 2003)
+- Razorfish
+  · Principal Consultant (2000 – 2001)
+- PwC
+  · Consultant, Strategic Change Group (1997 – 1998)
+  · Research Analyst, Utilities Industry (1995 – 1997)"			https://uk.linkedin.com/in/peterkim	
+New York	Juhan	Kim			Native or bilingual	"'- MBA: INSEAD (1999 – 2000)
+- Bachelor of Business Administration (BBA): Korea University (1994 – 1996)
+- Bachelor of Arts (B.A.): Korea University (1989 – 1994)
+- Kyorin University (1994)
+- Pontificia Universidad Javeriana (1990)"				https://www.linkedin.com/in/juhan-kim	
+China or Korea (need to check)	Luke	Kang			Worked in Korea so probably speaks Korean but might need to check	"'- Management - Sloan Fellow: Stanford University Graduate School of Business, MS (2009 – 2010)
+- AB: University of Michigan (1991 – 1995)
+- High School (1987 – 1991)"	"'- The Walt Disney Company
+  · President, Asia Pacific (2021 – Present)
+  · EVP/Managing Director, North Asia (2017 – 2020)
+  · EVP/Managing Director, Greater China (2014 – 2017)
+  · SVP/Managing Director, Consumer Products and Interactive, Greater China (2014 – 2014)
+  · SVP/Managing Director, Korea (2011 – 2014)
+- Live365
+  · Chief Operating Officer (2010 – 2011)
+- Gravity
+  · Independent Director/BOD (2008 – 2011)
+- Viacom - MTV Networks
+  · SVP/Managing Director, Korea (2006 – 2008)
+  · Senior Vice President, Strategy and Digital Media, Asia (2001 – 2006)
+- Asiacontent.com
+  · Manager, Business Development (2000)
+- Monitor Group
+  · Senior Consultant (1996 – 2000)"			https://kr.linkedin.com/in/lukekang	
+Korea	Peter	Kwak			Native or bilingual	"'- MBA: The University of Chicago Booth School of Business (1999 – 2001)
+- Bachelor of Arts - BA: McGill University (1986 – 1991)"	"'- adidas
+  · SVP/GM adidas Korea (2021 – Present)
+- Changshin Inc
+  · Chief Executive Officer (2020 – 2021)
+- lululemon
+  · VP/Managing Director Korea (2017 – 2020)
+- Philips
+  · GM Consumer Products Korea (2015 – 2017)
+- Nike
+  · VP/GM, Nike Korea (2009 – 2015)
+  · Footwear Business Director, Korea (2006 – 2009)
+  · Strategic and Financial Planning Director, Asia Pacific Footwear (2003 – 2006)
+- McKinsey and Co
+  · Associate (2001 – 2003)"			https://kr.linkedin.com/in/peter-kwak-2984141	
