@@ -17,7 +17,7 @@ Search results example in LinkedIn Recruiter:
 If you copy the text from the Experience and Education sections of Recruiter search results and paste it into columns in an Excel file, then you can run this LinkedInListFormatter program on the Excel file to format the text.
 
 Example of search results text copied-and-pasted into an Excel file:  
-<img src="https://raw.github.com/pthussey/LinkedInListFormatter/main/assets/images/excel_before_conversion.png" width="528" height="166"/>
+<img src="https://raw.github.com/pthussey/LinkedInListFormatter/main/assets/images/excel_before_conversion.png" width="713" height="259"/>
 
 Once you have all the search results you need copied into an excel file, you can then run the program to do the formatting.  
 If you have Python installed on your machine, you can run it using the Python file (pandas and openpyxl packages are also required).
