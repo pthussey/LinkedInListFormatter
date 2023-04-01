@@ -29,9 +29,9 @@ When running the program just follow the intructions at the prompts.
 
 <img src="https://raw.github.com/pthussey/LinkedInListFormatter/main/assets/images/enter_filename.png" width="410" height="19"/>
 
-<img src="https://raw.github.com/pthussey/LinkedInListFormatter/main/assets/images/enter_work_experience.png" width="410" height="20"/>
+<img src="https://raw.github.com/pthussey/LinkedInListFormatter/main/assets/images/enter_work_experience.png" width="410" height="19"/>
 
-<img src="https://raw.github.com/pthussey/LinkedInListFormatter/main/assets/images/enter_education.png" width="410" height="20"/>
+<img src="https://raw.github.com/pthussey/LinkedInListFormatter/main/assets/images/enter_education.png" width="410" height="19"/>
 
 Then your Excel output file will be produced.  
 If you select the columns that hold the work experience and education text in your output file and enable "Wrap Text" you will be able to see the full text.
