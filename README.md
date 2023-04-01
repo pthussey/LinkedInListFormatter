@@ -27,7 +27,7 @@ When running the program just follow the intructions at the prompts.
 
 <img src="https://raw.github.com/pthussey/LinkedInListFormatter/main/assets/images/enter_path.png" width="410" height="16"/>  
 
-<img src="https://raw.github.com/pthussey/LinkedInListFormatter/main/assets/images/enter_filename.png" width="410" height="17"/>
+<img src="https://raw.github.com/pthussey/LinkedInListFormatter/main/assets/images/enter_filename.png" width="410" height="18"/>
 
 <img src="https://raw.github.com/pthussey/LinkedInListFormatter/main/assets/images/enter_work_experience.png" width="410" height="17"/>
 
