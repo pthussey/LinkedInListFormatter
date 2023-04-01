@@ -37,4 +37,4 @@ Then your Excel output file will be produced.
 If you select the columns that hold the work experience and education text in your output file and enable "Wrap Text" you will be able to see the full text.
 
 The end result will look like this:  
-<img src="https://raw.github.com/pthussey/LinkedInListFormatter/main/assets/images/excel_after_conversion.png" width="685" height="177"/>
+<img src="https://raw.github.com/pthussey/LinkedInListFormatter/main/assets/images/excel_after_conversion.png" width="925" height="240"/>
