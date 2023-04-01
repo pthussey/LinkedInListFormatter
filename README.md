@@ -29,7 +29,7 @@ When running the program just follow the intructions at the prompts.
 
 <img src="https://raw.github.com/pthussey/LinkedInListFormatter/main/assets/images/enter_filename.png" width="410" height="19"/>
 
-<img src="https://raw.github.com/pthussey/LinkedInListFormatter/main/assets/images/enter_work_experience.png" width="460" height="19"/>
+<img src="https://raw.github.com/pthussey/LinkedInListFormatter/main/assets/images/enter_work_experience.png" width="470" height="20"/>
 
 <img src="https://raw.github.com/pthussey/LinkedInListFormatter/main/assets/images/enter_education.png" width="440" height="19"/>
 
