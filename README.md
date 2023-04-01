@@ -12,7 +12,7 @@ This program uses the separation rules to split the text into parts and then rec
 Below is an example of how it works.
 
 Search results example in LinkedIn Recruiter:  
-<img src="https://raw.github.com/pthussey/LinkedInListFormatter/main/assets/images/Paul_Hussey_search_results.png" width="470" height="251"/>
+<img src="https://raw.github.com/pthussey/LinkedInListFormatter/main/assets/images/Paul_Hussey_search_results.png" width="470" height="270"/>
 
 If you copy the text from the Experience and Education sections of Recruiter search results and paste it into columns in an Excel file, then you can run this LinkedInListFormatter program on the Excel file to format the text.
 
