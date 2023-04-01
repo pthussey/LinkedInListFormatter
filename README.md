@@ -3,7 +3,7 @@
 This program takes an Excel file that has work experience and education information copy-and-pasted from LinkedIn Recruiter search results 
 and puts it into a more readable format.
 
-It works only on text from paid LinkedIn search results pages because the text is separated according to set rules.  
+It works only on text copied from paid LinkedIn account (Premium or Corporate Recruiter) search results pages because the text is separated according to set rules.  
 Work experience entries are always written as [Job title] at [Company name] · [Period].  
 Education entries are a bit more complicated because some of the fields are optional but these are seperable as well.
 
@@ -27,9 +27,9 @@ When running the program just follow the intructions at the prompts.
 
 <img src="https://raw.github.com/pthussey/LinkedInListFormatter/main/assets/images/enter_path.png" width="410" height="16"/>  
 
-<img src="https://raw.github.com/pthussey/LinkedInListFormatter/main/assets/images/enter_filename.png" width="410" height="16"/>
+<img src="https://raw.github.com/pthussey/LinkedInListFormatter/main/assets/images/enter_filename.png" width="410" height="17"/>
 
-<img src="https://raw.github.com/pthussey/LinkedInListFormatter/main/assets/images/enter_work_experience.png" width="410" height="16"/>
+<img src="https://raw.github.com/pthussey/LinkedInListFormatter/main/assets/images/enter_work_experience.png" width="410" height="17"/>
 
 <img src="https://raw.github.com/pthussey/LinkedInListFormatter/main/assets/images/enter_education.png" width="410" height="16"/>
 
